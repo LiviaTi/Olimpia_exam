@@ -1,13 +1,14 @@
 # chains/news_chain.py
-
 from typing import List
-from tools.bing_search import search_news
 
+# Agora importamos do novo arquivo 'web_search', não mais do 'bing_search'
+try:
+    from APIs.web_search import search_news
+except ImportError:
+    # Fallback caso a pasta se chame tools
+    from tools.web_search import search_news
 
 def get_company_news(company_name: str) -> List[dict]:
-    """
-    Retrieve and normalize recent news for a given company.
-    """
     query = f"{company_name} stock market news"
     news_items = search_news(query)
 
