@@ -1,0 +1,18 @@
+# 1. Segurança (O MAIS IMPORTANTE)
+.env
+.env.local
+
+# 2. Ambiente Virtual e Bibliotecas
+venv/
+.venv/
+env/
+__pycache__/
+*.pyc
+
+# 3. Arquivos de Sistema Operacional (Lixo)
+.DS_Store
+Thumbs.db
+
+# 4. Configurações de IDE (VS Code, PyCharm)
+.vscode/
+.idea/

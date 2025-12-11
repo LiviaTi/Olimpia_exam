@@ -1,10 +1,10 @@
 # chains/stock_chain.py
 import os
 from langchain_google_genai import ChatGoogleGenerativeAI
-from langchain.prompts import PromptTemplate
+from langchain_core.prompts import PromptTemplate  # <--- Corrigido aqui
 from langchain_core.output_parsers import StrOutputParser
 
-# Tente importar da pasta APIs ou tools, dependendo de como renomeou
+# Tente importar da pasta APIs ou tools
 try:
     from APIs.yahoo_finance import get_stock_price
 except ImportError:
