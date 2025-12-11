@@ -1,4 +1,3 @@
-# chains/stock_chain.py
 
 from tools.yahoo_finance import get_stock_price
 
