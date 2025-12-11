@@ -1,7 +1,7 @@
 # chains/stock_chain.py
 import os
 from langchain_google_genai import ChatGoogleGenerativeAI
-from langchain_core.prompts import PromptTemplate  # <--- Corrigido aqui
+from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 
 # Tente importar da pasta APIs ou tools
@@ -17,8 +17,9 @@ def get_ticker_from_name(company_name: str) -> str:
     if not os.getenv("GOOGLE_API_KEY"):
         return "UNKNOWN"
 
+    # CORREÇÃO AQUI: Alterado para 'gemini-1.5-flash-latest'
     llm = ChatGoogleGenerativeAI(
-        model="gemini-1.5-flash",
+        model="gemini-1.5-flash-latest",
         temperature=0.0,
         google_api_key=os.getenv("GOOGLE_API_KEY")
     )

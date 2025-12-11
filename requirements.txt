@@ -3,4 +3,4 @@ langchain-google-genai
 requests
 yfinance
 streamlit
-duckduckgo-search
+ddgs
