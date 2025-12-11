@@ -17,9 +17,8 @@ def get_ticker_from_name(company_name: str) -> str:
     if not os.getenv("GOOGLE_API_KEY"):
         return "UNKNOWN"
 
-    # CORREÇÃO AQUI: Alterado para 'gemini-1.5-flash-latest'
     llm = ChatGoogleGenerativeAI(
-        model="gemini-1.5-flash-latest",
+        model="gemini-2.5-flash",
         temperature=0.0,
         google_api_key=os.getenv("GOOGLE_API_KEY")
     )

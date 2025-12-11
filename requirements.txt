@@ -1,6 +1,7 @@
 langchain
-langchain-google-genai
 requests
 yfinance
 streamlit
 ddgs
+langchain-google-genai 
+google-generativeai
